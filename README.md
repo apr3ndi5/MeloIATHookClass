@@ -3,3 +3,6 @@
 
 ## How it works?
 It acess the function address in IAT and changes this value for one that you want.
+## License
+
+Licenciada abaixo da Licença [MIT](LICENSE).
