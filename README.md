@@ -10,3 +10,9 @@ Ele acessa o endereço da função dentro da IAT e muda o valor pra um que você
 ## License
 
 Licenciada abaixo da Licença [MIT](LICENSE).
+
+
+## Thanks:
+iPower
+Define
+[CERO](https://www.youtube.com/watch?v=IkUfXfnnKH4&list=PLIfZMtpPYFP6zLKlnyAeWY1I85VpyshAA) Estou aprendendo muito lá!
