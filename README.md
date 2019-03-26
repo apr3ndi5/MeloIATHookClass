@@ -16,3 +16,4 @@ Licenciada abaixo da Licença [MIT](LICENSE).
 * iPower#4714
 * Define
 * [CERO](https://www.youtube.com/watch?v=IkUfXfnnKH4&list=PLIfZMtpPYFP6zLKlnyAeWY1I85VpyshAA)
+* [Mente binária](http://menteb.in/discord)
