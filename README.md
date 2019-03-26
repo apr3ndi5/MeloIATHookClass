@@ -1,5 +1,5 @@
 # MeloIATHookClass
-## Class for hooking IAT
+## Class for hooking IAT | Classe para hookar a IAT
 
 ## How it works?
 It access the function address in IAT and changes this value for one that you want.
@@ -7,9 +7,11 @@ It access the function address in IAT and changes this value for one that you wa
 ## Como funciona?
 Ele acessa o endereço da função dentro da IAT e muda o valor pra um que você desejar.
 
-## License
+## License | Licença
 
 Licenciada abaixo da Licença [MIT](LICENSE).
+
+Using the MIT license [MIT](LICENSE).
 
 
 ## Thanks:
