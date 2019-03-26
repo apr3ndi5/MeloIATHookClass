@@ -13,6 +13,6 @@ Licenciada abaixo da Licença [MIT](LICENSE).
 
 
 ## Thanks:
-iPower
-Define
-[CERO](https://www.youtube.com/watch?v=IkUfXfnnKH4&list=PLIfZMtpPYFP6zLKlnyAeWY1I85VpyshAA) Estou aprendendo muito lá!
+* iPower
+* Define
+* [CERO](https://www.youtube.com/watch?v=IkUfXfnnKH4&list=PLIfZMtpPYFP6zLKlnyAeWY1I85VpyshAA)
