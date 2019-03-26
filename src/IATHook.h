@@ -39,20 +39,29 @@ public:
 
 			ImportLookUpTable = ReCa<PIMAGE_THUNK_DATA>(ImportDescriptor[i].OriginalFirstThunk + (BYTE*)DOSHeader);
 
-			if (ImportLookUpTable == NULL)
-				break;
-
-			if (!(ImportLookUpTable->u1.AddressOfData & IMAGE_ORDINAL_FLAG))
-				FunctionGetName = ReCa<PIMAGE_IMPORT_BY_NAME>(ImportLookUpTable->u1.AddressOfData + (BYTE*)DOSHeader);
-
-			if (FunctionGetName->Name != FunctionName)
-				continue;
-			else
+			for (int j = 0; ; ++j)
 			{
-				IAT = ReCa<PIMAGE_THUNK_DATA>(ImportDescriptor[i].FirstThunk + (BYTE*)DOSHeader);
-				*ReCa<uintptr_t*>(IAT) = Addr;
-				return true;
+				if (ImportLookUpTable[j].u1.AddressOfData == NULL)
+					break;
+
+				if (!(ImportLookUpTable[j].u1.AddressOfData & IMAGE_ORDINAL_FLAG))
+					FunctionGetName = ReCa<PIMAGE_IMPORT_BY_NAME>(ImportLookUpTable[j].u1.AddressOfData + (BYTE*)DOSHeader);
+
+				if (FunctionGetName->Name != FunctionName)
+					continue;
+
+				else
+				{
+					IAT = ReCa<PIMAGE_THUNK_DATA>(ImportDescriptor[i].FirstThunk + (BYTE*)DOSHeader);
+					DWORD OldProtect = { 0 };
+					VirtualProtect(IAT + j, 4, PAGE_READWRITE, &OldProtect);
+					*ReCa<uintptr_t*>(IAT + j) = Addr;
+					VirtualProtect(IAT + j, 4, OldProtect, nullptr);
+					return true;
+				}
+
 			}
+
 		}
 		return false;
 	}
